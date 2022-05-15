@@ -9,7 +9,7 @@ This project uses your discord token to scan your mutual friends list. However, 
 
 ## Setup
 
-To use Mutuals, you will need [NodeJS](https://nodejs.org/en/) and [npm](https://www.npmjs.com/). Then, either `git clone` this repository or [download it](https://github.com/humboldt123/mutuals/archive/refs/heads/main.zip). Navigate to it in your terminal of choice then run `npm i` to install its dependencies and `npm run start` to run it.
+To use Mutuals, you will need [NodeJS](https://nodejs.org/en/) and [npm](https://www.npmjs.com/). Then, either `git clone` this repository or [download it](https://github.com/humboldt123/mutuals/archive/refs/heads/main.zip). Navigate to it in your terminal of choice then run `npm i` to install its dependencies and `npm start` to run it.
 
 ## Instructions
 
