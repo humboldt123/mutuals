@@ -5,6 +5,7 @@ async function graph() {
   let options = await (await fetch("./options.json")).json();
 
   let data = {nodes: [], edges: []};
+  let links = new Set();
 
   // Loop through connections...
   for (id in connections) {
@@ -16,11 +17,13 @@ async function graph() {
         image: friend.avatarUrl,
         label: friend.username,
       });
-      // Register the link
-      let links = []
-      friend.connections.forEach(mutual => data.edges.push({from: parseInt(id), to: parseInt(mutual)}));
+      // Add the links to our set
+      friend.connections.forEach(mutual => links.add([id, mutual].sort((a, b) => parseInt(a) - parseInt(b)).join(" ")));
     }
   }
+
+  // Register each link in edges
+  [...links].forEach(link => data.edges.push({from:parseInt(link.split(" ")[0]), to:parseInt(link.split(" ")[1])}));
 
   network = new vis.Network(container, data, options);
 }
