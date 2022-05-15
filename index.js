@@ -22,7 +22,7 @@ async function main() {
 async function update() {
     let result = await axios.get(`https://discord.com/api/v9/users/@me/relationships`, {headers: header});
     let relationships = Array.from(result.data);
-    for (let i = 0; i < /*12*/relationships.length; i++) {
+    for (let i = 0; i < relationships.length; i++) {
         if (relationships[i].type == 1) { // https://luna.gitlab.io/discord-unofficial-docs/relationships.html#relationshiptype-enum
             data[relationships[i].id] = {
                 "username": relationships[i].user.username,
