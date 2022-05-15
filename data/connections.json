@@ -1,0 +1,14 @@
+{
+	"0": {
+		"username": "Mutuals",
+		"id": "0",
+		"avatarUrl": "./icon.png",
+		"connections": ["1"]
+	},
+	"1": {
+		"username": "Please scan connections.json",
+		"id": "1",
+        "avatarUrl": "https://cdn.discordapp.com/embed/avatars/4.png",
+		"connections": ["0"]
+	}
+}
