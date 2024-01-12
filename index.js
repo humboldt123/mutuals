@@ -1,5 +1,5 @@
 let express = require("express");
-let axios= require('axios');
+let axios = require('axios');
 let fs = require('fs');
 let prompt = require('prompt-sync')({sigint: true});
 let open = require('open');
